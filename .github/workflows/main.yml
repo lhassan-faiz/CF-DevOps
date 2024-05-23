@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI with Maven
 
 on: [push, pull_request]
 
@@ -17,8 +17,8 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Compile Java application
-      run: javac hello.java
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
 
     - name: Run Java application
-      run: java Hello
+      run: java -cp target/hello-world-1.0-SNAPSHOT.jar maven.Hello
