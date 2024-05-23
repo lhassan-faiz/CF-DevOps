@@ -18,7 +18,7 @@ jobs:
         java-version: '11'
 
     - name: Compile Java application
-      run: javac HelloWorld.java
+      run: javac hello.java
 
     - name: Run Java application
-      run: java HelloWorld
+      run: java Hello
